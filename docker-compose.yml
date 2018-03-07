@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node:
+    image: quiz-app
+    ports:
+    - "3001:3001"
+    links:
+    - mongo
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
